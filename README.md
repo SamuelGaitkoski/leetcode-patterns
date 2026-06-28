@@ -14,15 +14,18 @@ Each pattern lives in its own folder. Inside, every problem gets its own subfold
 - **`README.md`** — a write-up filled out from [`TEMPLATE.md`](TEMPLATE.md): the approach, key insight, complexity, and what tripped me up.
 - **`Program.cs`** — a small runnable test harness so each solution can be verified independently.
 
+Every problem is a self-contained subfolder (its own .NET project) inside its pattern folder:
+
 ```
 leetcode-patterns/
 ├── README.md            ← you are here
 ├── TEMPLATE.md          ← copy this for every new problem
 ├── HashMap/
-│   ├── HashMap.csproj
-│   ├── TwoSum.cs
-│   ├── Program.cs
-│   └── README.md
+│   └── TwoSum/
+│       ├── TwoSum.csproj
+│       ├── TwoSum.cs
+│       ├── Program.cs
+│       └── README.md
 ├── TwoPointers/         ← (coming soon)
 ├── SlidingWindow/       ← (coming soon)
 ├── BinarySearch/        ← (coming soon)
@@ -43,14 +46,14 @@ leetcode-patterns/
 
 | Problem | Pattern | Difficulty | Solution |
 | ------- | ------- | ---------- | -------- |
-| [1. Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy | [HashMap/](HashMap/) |
+| [1. Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy | [HashMap/TwoSum/](HashMap/TwoSum/) |
 
 ## Running a solution
 
-Each pattern folder is a self-contained .NET console project:
+Each problem folder is a self-contained .NET console project:
 
 ```bash
-cd HashMap
+cd HashMap/TwoSum
 dotnet run
 ```
 
