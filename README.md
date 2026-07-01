@@ -26,6 +26,12 @@ leetcode-patterns/
 │       ├── TwoSum.cs
 │       ├── Program.cs
 │       └── README.md
+├── Math/
+│   └── PalindromeNumber/
+│       ├── PalindromeNumber.csproj
+│       ├── PalindromeNumber.cs
+│       ├── Program.cs
+│       └── README.md
 ├── TwoPointers/         ← (coming soon)
 ├── SlidingWindow/       ← (coming soon)
 ├── BinarySearch/        ← (coming soon)
@@ -41,12 +47,14 @@ leetcode-patterns/
 | Sliding Window | Maintain a moving range and update it incrementally instead of redoing work. |
 | Binary Search  | Halve the search space each step on monotonic / sorted data.           |
 | Linked List    | Pointer manipulation — fast/slow pointers, reversal, dummy heads.       |
+| Math           | Digit/number manipulation — modulo, integer division, overflow care.   |
 
 ## Progress
 
 | Problem | Pattern | Difficulty | Solution |
 | ------- | ------- | ---------- | -------- |
 | [1. Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy | [HashMap/TwoSum/](HashMap/TwoSum/) |
+| [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Math | Easy | [Math/PalindromeNumber/](Math/PalindromeNumber/) |
 
 ## Running a solution
 
