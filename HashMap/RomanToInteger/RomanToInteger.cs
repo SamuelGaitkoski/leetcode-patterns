@@ -91,7 +91,35 @@ public class Solution
         return num;
     }
 
-    // Approach 2: left-to-right, compare each numeral with the NEXT one.
+    // Approach 2: explicit subtractive pairs — my idea from Approach 1, simplified.
+    // Instead of looking backward AND forward, only look forward: when the current
+    // symbol starts one of the six subtractive pairs, add the pair's value and
+    // skip the next char (i++); otherwise add the symbol on its own. Same spirit
+    // as the original, but one direction and no per-symbol branch for the large
+    // numerals. O(n) time, O(1) space.
+    public int RomanToIntExplicit(string s)
+    {
+        int num = 0;
+
+        for (int i = 0; i < s.Length; i++)
+        {
+            char c = s[i];
+            bool hasNext = i + 1 < s.Length;
+            char next = hasNext ? s[i + 1] : '\0';  // '\0' safely matches nothing
+
+            if (c == 'I' && next == 'V') { num += 4; i++; }
+            else if (c == 'I' && next == 'X') { num += 9; i++; }
+            else if (c == 'X' && next == 'L') { num += 40; i++; }
+            else if (c == 'X' && next == 'C') { num += 90; i++; }
+            else if (c == 'C' && next == 'D') { num += 400; i++; }
+            else if (c == 'C' && next == 'M') { num += 900; i++; }
+            else { num += Values[c]; }
+        }
+
+        return num;
+    }
+
+    // Approach 3: left-to-right, compare each numeral with the NEXT one.
     // The single rule that replaces all the special cases: a numeral that is
     // smaller than the one after it is subtractive (IV, IX, XL, CM, ...).
     // O(n) time, O(1) space.
@@ -112,7 +140,7 @@ public class Solution
         return total;
     }
 
-    // Approach 3: right-to-left, no look-ahead needed at all (LeetCode's Hint 1).
+    // Approach 4: right-to-left, no look-ahead needed at all (LeetCode's Hint 1).
     // Walk from the end tracking the largest value seen so far. Anything smaller
     // than that maximum is a subtractive prefix. O(n) time, O(1) space.
     public int RomanToIntRightToLeft(string s)
