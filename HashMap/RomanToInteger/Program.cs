@@ -23,13 +23,13 @@ public static class Program
 
         foreach (var (s, expected) in cases)
         {
-            int explicitPairs = solution.RomanToIntExplicit(s);
-            int compareNext = solution.RomanToInt(s);
+            int lookBothWays = solution.RomanToInt(s);
+            int compareNext = solution.RomanToIntCompareNext(s);
             int rightToLeft = solution.RomanToIntRightToLeft(s);
-            bool pass = explicitPairs == expected && compareNext == expected && rightToLeft == expected;
+            bool pass = lookBothWays == expected && compareNext == expected && rightToLeft == expected;
             allPassed &= pass;
 
-            Console.WriteLine($"{s,-10} -> explicit={explicitPairs,-5} next={compareNext,-5} rtl={rightToLeft,-5} " +
+            Console.WriteLine($"{s,-10} -> bothWays={lookBothWays,-5} next={compareNext,-5} rtl={rightToLeft,-5} " +
                               $"(expected {expected}) {(pass ? "PASS" : "FAIL")}");
         }
 
