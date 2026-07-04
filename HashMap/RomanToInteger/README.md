@@ -63,7 +63,18 @@ Two corrections vs. the crashing version:
 It's the most verbose of the three, but it maps one-to-one onto how the numerals
 are described in the prompt, which is why it was a natural first instinct.
 
-### Approach 2 — left-to-right, compare with next (`RomanToIntCompareNext`)
+### Approach 2 — explicit subtractive pairs (`RomanToIntExplicit`) — my idea, simplified
+
+Same instinct as Approach 1, but trimmed down. Instead of looking **both** ways,
+only look **forward**: if the current symbol begins one of the six subtractive
+pairs (`IV IX XL XC CD CM`), add that pair's value and skip the next character
+(`i++`); otherwise add the symbol alone. A `'\0'` sentinel stands in for a
+missing next char so `next == 'V'` is simply `false` at the end of the string —
+no bounds check needed. This drops the backward `s[i - 1]` reasoning and the
+per-large-numeral branches, so it's noticeably shorter than Approach 1 while
+being the same core idea.
+
+### Approach 3 — left-to-right, compare with next (`RomanToIntCompareNext`)
 
 Look up each numeral's value. If `value(s[i]) < value(s[i+1])`, subtract it;
 otherwise add it. The **only** subtlety is guarding the look-ahead:
@@ -79,7 +90,7 @@ The `i + 1 < s.Length` check must come **first** (C# `&&` short-circuits, so
 `s[i + 1]` is never evaluated on the last character). That guard is exactly what
 the crashing version was missing.
 
-### Approach 3 — right-to-left, no look-ahead (`RomanToIntRightToLeft`)
+### Approach 4 — right-to-left, no look-ahead (`RomanToIntRightToLeft`)
 
 This is **LeetCode's Hint 1** ("work the string from back to front and use a
 map"). Walk from the end, remembering the largest value seen so far (`rightMax`).
@@ -89,11 +100,12 @@ entirely because it never needs to peek at a neighbour.
 
 ## Complexity
 
-| Approach                    | Time | Space |
-| --------------------------- | ---- | ----- |
-| Look both ways (my attempt) | O(n) | O(1)  |
-| Left-to-right + next        | O(n) | O(1)  |
-| Right-to-left (Hint 1)      | O(n) | O(1)  |
+| Approach                     | Time | Space |
+| ---------------------------- | ---- | ----- |
+| Look both ways (my attempt)  | O(n) | O(1)  |
+| Explicit pairs (simplified)  | O(n) | O(1)  |
+| Left-to-right + next         | O(n) | O(1)  |
+| Right-to-left (Hint 1)       | O(n) | O(1)  |
 
 The dictionary is fixed at 7 entries, so it counts as O(1) space. `n` is the
 length of the string (≤ 15 by the constraints).
