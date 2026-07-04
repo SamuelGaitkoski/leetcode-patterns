@@ -39,7 +39,17 @@ ladder isn't needed at all.
 
 ## Approach(es)
 
-### Approach 1 — left-to-right, compare with next (`RomanToInt`)
+### Approach 1 — handle each subtractive pair explicitly (`RomanToIntExplicit`)
+
+This is the shape of my original attempt, corrected. Scan left to right; when the
+current symbol begins one of the six subtractive pairs (`IV IX XL XC CD CM`), add
+that pair's value and skip the next character (`i++`); otherwise add the symbol
+on its own. The fix vs. the crash is that every look-ahead is guarded — I read a
+`next` char only when `i + 1 < s.Length`, using `'\0'` as a harmless sentinel
+otherwise, so `s[i + 1]` is never read out of bounds. It's more verbose than the
+rule-based version below, but it maps directly to how the numerals are described.
+
+### Approach 2 — left-to-right, compare with next (`RomanToInt`)
 
 Look up each numeral's value. If `value(s[i]) < value(s[i+1])`, subtract it;
 otherwise add it. The **only** subtlety is guarding the look-ahead:
@@ -55,19 +65,21 @@ The `i + 1 < s.Length` check must come **first** (C# `&&` short-circuits, so
 `s[i + 1]` is never evaluated on the last character). That guard is exactly what
 the crashing version was missing.
 
-### Approach 2 — right-to-left, no look-ahead (`RomanToIntRightToLeft`)
+### Approach 3 — right-to-left, no look-ahead (`RomanToIntRightToLeft`)
 
-Walk from the end, remembering the largest value seen so far (`rightMax`). If the
-current numeral is smaller than `rightMax`, it's a subtractive prefix → subtract;
-otherwise add it and update `rightMax`. This avoids the bounds question entirely
-because it never needs to peek at a neighbour.
+This is **LeetCode's Hint 1** ("work the string from back to front and use a
+map"). Walk from the end, remembering the largest value seen so far (`rightMax`).
+If the current numeral is smaller than `rightMax`, it's a subtractive prefix →
+subtract; otherwise add it and update `rightMax`. This avoids the bounds question
+entirely because it never needs to peek at a neighbour.
 
 ## Complexity
 
-| Approach              | Time | Space |
-| --------------------- | ---- | ----- |
-| Left-to-right + next  | O(n) | O(1)  |
-| Right-to-left         | O(n) | O(1)  |
+| Approach                    | Time | Space |
+| --------------------------- | ---- | ----- |
+| Explicit subtractive pairs  | O(n) | O(1)  |
+| Left-to-right + next        | O(n) | O(1)  |
+| Right-to-left (Hint 1)      | O(n) | O(1)  |
 
 The dictionary is fixed at 7 entries, so it counts as O(1) space. `n` is the
 length of the string (≤ 15 by the constraints).
