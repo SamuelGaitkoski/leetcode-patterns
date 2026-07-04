@@ -4,7 +4,8 @@ namespace LeetCodePatterns.HashMap.RomanToInteger;
 // Convert a valid Roman numeral string to its integer value.
 public class Solution
 {
-    // Symbol -> value lookup. Static + readonly so it's built once, not per call.
+    // Symbol -> value lookup, used by approaches 2 and 3. Static + readonly so
+    // it's built once, not per call.
     private static readonly Dictionary<char, int> Values = new()
     {
         ['I'] = 1,
@@ -16,30 +17,75 @@ public class Solution
         ['M'] = 1000,
     };
 
-    // Approach 1: handle each subtractive PAIR explicitly (the shape of the
-    // original attempt, corrected). When the current symbol starts one of the
-    // six special pairs, add the pair's value and skip the next char (i++);
-    // otherwise add the symbol on its own. O(n) time, O(1) space.
-    //
-    // The fix vs. the crashing version: every look-ahead is guarded by
-    // `hasNext`, so s[i + 1] is only touched when it actually exists.
-    public int RomanToIntExplicit(string s)
+    // Approach 1: "look both ways" — my original attempt, corrected.
+    // For each symbol, look at the PREVIOUS char to decide whether this larger
+    // numeral is reduced (e.g. M after C is 900, not 1000), and look at the NEXT
+    // char to skip a smaller numeral that is only a subtractive prefix (e.g. the
+    // C in "CM" is counted when we reach the M, so we skip it here).
+    // O(n) time, O(1) space.
+    public int RomanToInt(string s)
     {
         int num = 0;
 
         for (int i = 0; i < s.Length; i++)
         {
-            char c = s[i];
+            // Guard for the look-ahead: true when the next char is missing OR is
+            // not one of the two larger numerals this symbol can prefix. Reading
+            // s[i + 1] unconditionally (as the original did) threw
+            // IndexOutOfRangeException on the last character. Treating "no next
+            // char" as "not a larger numeral" means the symbol gets counted here.
             bool hasNext = i + 1 < s.Length;
-            char next = hasNext ? s[i + 1] : '\0';
 
-            if (c == 'I' && next == 'V') { num += 4; i++; }
-            else if (c == 'I' && next == 'X') { num += 9; i++; }
-            else if (c == 'X' && next == 'L') { num += 40; i++; }
-            else if (c == 'X' && next == 'C') { num += 90; i++; }
-            else if (c == 'C' && next == 'D') { num += 400; i++; }
-            else if (c == 'C' && next == 'M') { num += 900; i++; }
-            else { num += Values[c]; }
+            if (s[i] == 'M')
+            {
+                if (i > 0 && s[i - 1] == 'C')
+                    num += 900;   // CM
+                else
+                    num += 1000;
+            }
+
+            if (s[i] == 'D')
+            {
+                if (i > 0 && s[i - 1] == 'C')
+                    num += 400;   // CD
+                else
+                    num += 500;
+            }
+
+            if (s[i] == 'C' && (!hasNext || (s[i + 1] != 'D' && s[i + 1] != 'M')))
+            {
+                if (i > 0 && s[i - 1] == 'X')
+                    num += 90;    // XC
+                else
+                    num += 100;
+            }
+
+            if (s[i] == 'L')
+            {
+                if (i > 0 && s[i - 1] == 'X')
+                    num += 40;    // XL
+                else
+                    num += 50;
+            }
+
+            if (s[i] == 'X' && (!hasNext || (s[i + 1] != 'L' && s[i + 1] != 'C')))
+            {
+                if (i > 0 && s[i - 1] == 'I')
+                    num += 9;     // IX
+                else
+                    num += 10;
+            }
+
+            if (s[i] == 'V')
+            {
+                if (i > 0 && s[i - 1] == 'I')
+                    num += 4;     // IV
+                else
+                    num += 5;
+            }
+
+            if (s[i] == 'I' && (!hasNext || (s[i + 1] != 'V' && s[i + 1] != 'X')))
+                num += 1;
         }
 
         return num;
@@ -49,7 +95,7 @@ public class Solution
     // The single rule that replaces all the special cases: a numeral that is
     // smaller than the one after it is subtractive (IV, IX, XL, CM, ...).
     // O(n) time, O(1) space.
-    public int RomanToInt(string s)
+    public int RomanToIntCompareNext(string s)
     {
         int total = 0;
 
@@ -57,9 +103,6 @@ public class Solution
         {
             int current = Values[s[i]];
 
-            // Guard the look-ahead: only read s[i + 1] when it exists. Skipping
-            // this check is what throws IndexOutOfRangeException on the last
-            // character (e.g. the final 'I' in "III").
             if (i + 1 < s.Length && current < Values[s[i + 1]])
                 total -= current;
             else
