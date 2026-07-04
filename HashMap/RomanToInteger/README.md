@@ -39,17 +39,31 @@ ladder isn't needed at all.
 
 ## Approach(es)
 
-### Approach 1 — handle each subtractive pair explicitly (`RomanToIntExplicit`)
+### Approach 1 — "look both ways" (`RomanToInt`) — my original attempt, corrected
 
-This is the shape of my original attempt, corrected. Scan left to right; when the
-current symbol begins one of the six subtractive pairs (`IV IX XL XC CD CM`), add
-that pair's value and skip the next character (`i++`); otherwise add the symbol
-on its own. The fix vs. the crash is that every look-ahead is guarded — I read a
-`next` char only when `i + 1 < s.Length`, using `'\0'` as a harmless sentinel
-otherwise, so `s[i + 1]` is never read out of bounds. It's more verbose than the
-rule-based version below, but it maps directly to how the numerals are described.
+This keeps the exact idea from my first attempt: one `if` per symbol, using
+**both** neighbours.
 
-### Approach 2 — left-to-right, compare with next (`RomanToInt`)
+- Look at the **previous** char to decide whether a larger numeral is reduced —
+  e.g. an `M` preceded by `C` is `900` (CM), otherwise `1000`.
+- Look at the **next** char to *skip* a smaller numeral that is only a
+  subtractive prefix — e.g. the `C` in `CM` is already counted when we reach the
+  `M`, so the `C` adds nothing on its own.
+
+Two corrections vs. the crashing version:
+
+1. **The bounds bug.** `s[i + 1]` was read with no guard, so the last character
+   blew up with `IndexOutOfRangeException`. The fix is `hasNext = i + 1 < s.Length`
+   and treating "no next char" as "not a larger numeral":
+   `(!hasNext || (s[i + 1] != 'D' && s[i + 1] != 'M'))`.
+2. **Dead variables removed.** The original declared `prevI`, `prevX`, `prevC`
+   and set them to `false`, but never read them — so they did nothing and are
+   gone.
+
+It's the most verbose of the three, but it maps one-to-one onto how the numerals
+are described in the prompt, which is why it was a natural first instinct.
+
+### Approach 2 — left-to-right, compare with next (`RomanToIntCompareNext`)
 
 Look up each numeral's value. If `value(s[i]) < value(s[i+1])`, subtract it;
 otherwise add it. The **only** subtlety is guarding the look-ahead:
@@ -77,7 +91,7 @@ entirely because it never needs to peek at a neighbour.
 
 | Approach                    | Time | Space |
 | --------------------------- | ---- | ----- |
-| Explicit subtractive pairs  | O(n) | O(1)  |
+| Look both ways (my attempt) | O(n) | O(1)  |
 | Left-to-right + next        | O(n) | O(1)  |
 | Right-to-left (Hint 1)      | O(n) | O(1)  |
 
