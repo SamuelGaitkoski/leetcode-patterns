@@ -21,9 +21,14 @@ leetcode-patterns/
 ├── README.md            ← you are here
 ├── TEMPLATE.md          ← copy this for every new problem
 ├── HashMap/
-│   └── TwoSum/
-│       ├── TwoSum.csproj
-│       ├── TwoSum.cs
+│   ├── TwoSum/
+│   │   ├── TwoSum.csproj
+│   │   ├── TwoSum.cs
+│   │   ├── Program.cs
+│   │   └── README.md
+│   └── RomanToInteger/
+│       ├── RomanToInteger.csproj
+│       ├── RomanToInteger.cs
 │       ├── Program.cs
 │       └── README.md
 ├── Math/
@@ -55,6 +60,7 @@ leetcode-patterns/
 | ------- | ------- | ---------- | -------- |
 | [1. Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy | [HashMap/TwoSum/](HashMap/TwoSum/) |
 | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Math | Easy | [Math/PalindromeNumber/](Math/PalindromeNumber/) |
+| [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | HashMap | Easy | [HashMap/RomanToInteger/](HashMap/RomanToInteger/) |
 
 ## Running a solution
 
