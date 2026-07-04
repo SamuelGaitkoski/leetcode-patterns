@@ -4,8 +4,8 @@ namespace LeetCodePatterns.HashMap.RomanToInteger;
 // Convert a valid Roman numeral string to its integer value.
 public class Solution
 {
-    // Symbol -> value lookup, used by approaches 2 and 3. Static + readonly so
-    // it's built once, not per call.
+    // Symbol -> value lookup, used by approaches 2, 3, and 4 (approach 1
+    // hardcodes its numbers). Static + readonly so it's built once, not per call.
     private static readonly Dictionary<char, int> Values = new()
     {
         ['I'] = 1,
