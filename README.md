@@ -37,6 +37,12 @@ leetcode-patterns/
 │       ├── PalindromeNumber.cs
 │       ├── Program.cs
 │       └── README.md
+├── Strings/
+│   └── LongestCommonPrefix/
+│       ├── LongestCommonPrefix.csproj
+│       ├── LongestCommonPrefix.cs
+│       ├── Program.cs
+│       └── README.md
 ├── TwoPointers/         ← (coming soon)
 ├── SlidingWindow/       ← (coming soon)
 ├── BinarySearch/        ← (coming soon)
@@ -53,6 +59,7 @@ leetcode-patterns/
 | Binary Search  | Halve the search space each step on monotonic / sorted data.           |
 | Linked List    | Pointer manipulation — fast/slow pointers, reversal, dummy heads.       |
 | Math           | Digit/number manipulation — modulo, integer division, overflow care.   |
+| Strings        | Character-level scanning — compare positions across strings, prefixes/suffixes. |
 
 ## Progress
 
@@ -61,6 +68,7 @@ leetcode-patterns/
 | [1. Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy | [HashMap/TwoSum/](HashMap/TwoSum/) |
 | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Math | Easy | [Math/PalindromeNumber/](Math/PalindromeNumber/) |
 | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | HashMap | Easy | [HashMap/RomanToInteger/](HashMap/RomanToInteger/) |
+| [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Strings | Easy | [Strings/LongestCommonPrefix/](Strings/LongestCommonPrefix/) |
 
 ## Running a solution
 
