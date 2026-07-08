@@ -2,9 +2,10 @@
 bin/
 obj/
 
-# Rider / Visual Studio
+# Rider / Visual Studio / VS Code
 .idea/
 .vs/
+.vscode/
 *.user
 
 # macOS
