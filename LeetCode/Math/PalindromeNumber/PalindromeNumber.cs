@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.Math.PalindromeNumber;
+namespace CodingPatterns.LeetCode.Math.PalindromeNumber;
 
 // LeetCode #9 — Palindrome Number
 // Return true if the integer reads the same forwards and backwards.
