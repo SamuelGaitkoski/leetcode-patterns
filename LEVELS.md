@@ -83,4 +83,8 @@ _None yet._
 
 ### 🔴 Hard
 
-_Populated as challenges are imported._
+| Problem | Pattern | Path |
+| ------- | ------- | ---- |
+| Chessboard Traveling | Dynamic Programming | [Coderbyte/DynamicProgramming/ChessboardTraveling/](Coderbyte/DynamicProgramming/ChessboardTraveling/) |
+| Kaprekar's Constant | Math | [Coderbyte/Math/KaprekarsConstant/](Coderbyte/Math/KaprekarsConstant/) |
+| Matrix Determinant | Matrix | [Coderbyte/Matrix/MatrixDeterminant/](Coderbyte/Matrix/MatrixDeterminant/) |
