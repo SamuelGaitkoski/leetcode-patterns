@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.Strings.LongestCommonPrefix;
+namespace CodingPatterns.LeetCode.Strings.LongestCommonPrefix;
 
 // LeetCode #14 — Longest Common Prefix
 // Find the longest string that is a prefix of every string in the array.
