@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.HashMap.TwoSum;
+namespace CodingPatterns.LeetCode.HashMap.TwoSum;
 
 // LeetCode #1 — Two Sum
 // Return the indices of the two numbers that add up to target.
