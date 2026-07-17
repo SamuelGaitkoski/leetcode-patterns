@@ -99,6 +99,9 @@ coding-questions-patterns/
 | String Reduction | Coderbyte | Strings | Medium | [Coderbyte/Strings/StringReduction/](Coderbyte/Strings/StringReduction/) |
 | Symmetric Tree | Coderbyte | Tree | Medium | [Coderbyte/Tree/SymmetricTree/](Coderbyte/Tree/SymmetricTree/) |
 | Tree Constructor | Coderbyte | Tree | Medium | [Coderbyte/Tree/TreeConstructor/](Coderbyte/Tree/TreeConstructor/) |
+| Chessboard Traveling | Coderbyte | Dynamic Programming | Hard | [Coderbyte/DynamicProgramming/ChessboardTraveling/](Coderbyte/DynamicProgramming/ChessboardTraveling/) |
+| Kaprekar's Constant | Coderbyte | Math | Hard | [Coderbyte/Math/KaprekarsConstant/](Coderbyte/Math/KaprekarsConstant/) |
+| Matrix Determinant | Coderbyte | Matrix | Hard | [Coderbyte/Matrix/MatrixDeterminant/](Coderbyte/Matrix/MatrixDeterminant/) |
 
 ## Running a solution
 
