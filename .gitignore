@@ -10,3 +10,6 @@ obj/
 
 # macOS
 .DS_Store
+
+# Claude Code local scratch (worktrees, session state)
+.claude/
