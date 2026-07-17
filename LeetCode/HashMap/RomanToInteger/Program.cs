@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.HashMap.RomanToInteger;
+namespace CodingPatterns.LeetCode.HashMap.RomanToInteger;
 
 // Verifies both approaches against the LeetCode examples plus the edge case
 // that crashed the original buggy attempt ("III").
