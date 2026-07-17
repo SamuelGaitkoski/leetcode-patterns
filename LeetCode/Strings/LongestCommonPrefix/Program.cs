@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.Strings.LongestCommonPrefix;
+namespace CodingPatterns.LeetCode.Strings.LongestCommonPrefix;
 
 // Verifies all five approaches against the LeetCode examples plus edge cases:
 // an empty string in the array, a single string, and identical strings.
