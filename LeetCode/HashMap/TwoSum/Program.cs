@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.HashMap.TwoSum;
+namespace CodingPatterns.LeetCode.HashMap.TwoSum;
 
 // Verifies both approaches against the three LeetCode examples.
 // Run with `dotnet run` from this folder.
