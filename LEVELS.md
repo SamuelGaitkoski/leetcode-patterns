@@ -68,7 +68,18 @@ _None yet._
 
 ### 🟡 Medium
 
-_Populated as challenges are imported._
+| Problem | Pattern | Path |
+| ------- | ------- | ---- |
+| Consecutive | Sorting | [Coderbyte/Sorting/Consecutive/](Coderbyte/Sorting/Consecutive/) |
+| K Unique Characters | Sliding Window | [Coderbyte/SlidingWindow/KUniqueCharacters/](Coderbyte/SlidingWindow/KUniqueCharacters/) |
+| Minimum Window Substring | Sliding Window | [Coderbyte/SlidingWindow/MinimumWindowSubstring/](Coderbyte/SlidingWindow/MinimumWindowSubstring/) |
+| Number Encoding | Strings | [Coderbyte/Strings/NumberEncoding/](Coderbyte/Strings/NumberEncoding/) |
+| Preorder Traversal | Tree | [Coderbyte/Tree/PreorderTraversal/](Coderbyte/Tree/PreorderTraversal/) |
+| Prime Mover | Math | [Coderbyte/Math/PrimeMover/](Coderbyte/Math/PrimeMover/) |
+| Run Length | Strings | [Coderbyte/Strings/RunLength/](Coderbyte/Strings/RunLength/) |
+| String Reduction | Strings | [Coderbyte/Strings/StringReduction/](Coderbyte/Strings/StringReduction/) |
+| Symmetric Tree | Tree | [Coderbyte/Tree/SymmetricTree/](Coderbyte/Tree/SymmetricTree/) |
+| Tree Constructor | Tree | [Coderbyte/Tree/TreeConstructor/](Coderbyte/Tree/TreeConstructor/) |
 
 ### 🔴 Hard
 
