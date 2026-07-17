@@ -40,7 +40,31 @@ _None yet._
 
 ### 🟢 Easy
 
-_Populated as challenges are imported._
+| Problem | Pattern | Path |
+| ------- | ------- | ---- |
+| Alphabet Soup | Strings | [Coderbyte/Strings/AlphabetSoup/](Coderbyte/Strings/AlphabetSoup/) |
+| ArithGeo | Math | [Coderbyte/Math/ArithGeo/](Coderbyte/Math/ArithGeo/) |
+| Check Numbers | Math | [Coderbyte/Math/CheckNumbers/](Coderbyte/Math/CheckNumbers/) |
+| Fibonacci Checker | Math | [Coderbyte/Math/FibonacciChecker/](Coderbyte/Math/FibonacciChecker/) |
+| Find Intersection | Two Pointers | [Coderbyte/TwoPointers/FindIntersection/](Coderbyte/TwoPointers/FindIntersection/) |
+| First Factorial | Math | [Coderbyte/Math/FirstFactorial/](Coderbyte/Math/FirstFactorial/) |
+| First Reverse | Strings | [Coderbyte/Strings/FirstReverse/](Coderbyte/Strings/FirstReverse/) |
+| Letter Capitalize | Strings | [Coderbyte/Strings/LetterCapitalize/](Coderbyte/Strings/LetterCapitalize/) |
+| Letter Changes | Strings | [Coderbyte/Strings/LetterChanges/](Coderbyte/Strings/LetterChanges/) |
+| Longest Word | Strings | [Coderbyte/Strings/LongestWord/](Coderbyte/Strings/LongestWord/) |
+| Moving Median | Sliding Window | [Coderbyte/SlidingWindow/MovingMedian/](Coderbyte/SlidingWindow/MovingMedian/) |
+| Other Products | Math | [Coderbyte/Math/OtherProducts/](Coderbyte/Math/OtherProducts/) |
+| Palindrome | Strings | [Coderbyte/Strings/Palindrome/](Coderbyte/Strings/Palindrome/) |
+| Power of 2 | Math | [Coderbyte/Math/PowerOfTwo/](Coderbyte/Math/PowerOfTwo/) |
+| Product Digits | Math | [Coderbyte/Math/ProductDigits/](Coderbyte/Math/ProductDigits/) |
+| Question Marks | Strings | [Coderbyte/Strings/QuestionMarks/](Coderbyte/Strings/QuestionMarks/) |
+| Remove Brackets | Stack | [Coderbyte/Stack/RemoveBrackets/](Coderbyte/Stack/RemoveBrackets/) |
+| Simple Adding | Math | [Coderbyte/Math/SimpleAdding/](Coderbyte/Math/SimpleAdding/) |
+| Simple Symbols | Strings | [Coderbyte/Strings/SimpleSymbols/](Coderbyte/Strings/SimpleSymbols/) |
+| String Periods | Strings | [Coderbyte/Strings/StringPeriods/](Coderbyte/Strings/StringPeriods/) |
+| Time Convert | Math | [Coderbyte/Math/TimeConvert/](Coderbyte/Math/TimeConvert/) |
+| Username Validation | Strings | [Coderbyte/Strings/UsernameValidation/](Coderbyte/Strings/UsernameValidation/) |
+| Vowel Square | Matrix | [Coderbyte/Matrix/VowelSquare/](Coderbyte/Matrix/VowelSquare/) |
 
 ### 🟡 Medium
 
