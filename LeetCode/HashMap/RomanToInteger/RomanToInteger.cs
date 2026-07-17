@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.HashMap.RomanToInteger;
+namespace CodingPatterns.LeetCode.HashMap.RomanToInteger;
 
 // LeetCode #13 — Roman to Integer
 // Convert a valid Roman numeral string to its integer value.
