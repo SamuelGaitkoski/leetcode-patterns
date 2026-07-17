@@ -52,6 +52,11 @@ coding-questions-patterns/
 | Linked List    | Pointer manipulation — fast/slow pointers, reversal, dummy heads.       |
 | Math           | Digit/number manipulation — modulo, integer division, overflow care.   |
 | Strings        | Character-level scanning — compare positions across strings, prefixes/suffixes. |
+| Stack          | Last-in-first-out matching — brackets, spans, nearest-smaller/greater.  |
+| Tree           | Binary-tree traversal and structure — preorder, symmetry, construction. |
+| Matrix         | 2-D grid scanning — sliding blocks, row/column walks, determinants.     |
+| Sorting        | Order the data first, then a single linear pass solves it.             |
+| Dynamic Programming | Build answers from overlapping subproblems (or a combinatorial shortcut). |
 
 ## Progress
 
@@ -61,6 +66,29 @@ coding-questions-patterns/
 | [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/) | LeetCode | Math | Easy | [LeetCode/Math/PalindromeNumber/](LeetCode/Math/PalindromeNumber/) |
 | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | LeetCode | HashMap | Easy | [LeetCode/HashMap/RomanToInteger/](LeetCode/HashMap/RomanToInteger/) |
 | [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | LeetCode | Strings | Easy | [LeetCode/Strings/LongestCommonPrefix/](LeetCode/Strings/LongestCommonPrefix/) |
+| Alphabet Soup | Coderbyte | Strings | Easy | [Coderbyte/Strings/AlphabetSoup/](Coderbyte/Strings/AlphabetSoup/) |
+| ArithGeo | Coderbyte | Math | Easy | [Coderbyte/Math/ArithGeo/](Coderbyte/Math/ArithGeo/) |
+| Check Numbers | Coderbyte | Math | Easy | [Coderbyte/Math/CheckNumbers/](Coderbyte/Math/CheckNumbers/) |
+| Fibonacci Checker | Coderbyte | Math | Easy | [Coderbyte/Math/FibonacciChecker/](Coderbyte/Math/FibonacciChecker/) |
+| Find Intersection | Coderbyte | Two Pointers | Easy | [Coderbyte/TwoPointers/FindIntersection/](Coderbyte/TwoPointers/FindIntersection/) |
+| First Factorial | Coderbyte | Math | Easy | [Coderbyte/Math/FirstFactorial/](Coderbyte/Math/FirstFactorial/) |
+| First Reverse | Coderbyte | Strings | Easy | [Coderbyte/Strings/FirstReverse/](Coderbyte/Strings/FirstReverse/) |
+| Letter Capitalize | Coderbyte | Strings | Easy | [Coderbyte/Strings/LetterCapitalize/](Coderbyte/Strings/LetterCapitalize/) |
+| Letter Changes | Coderbyte | Strings | Easy | [Coderbyte/Strings/LetterChanges/](Coderbyte/Strings/LetterChanges/) |
+| Longest Word | Coderbyte | Strings | Easy | [Coderbyte/Strings/LongestWord/](Coderbyte/Strings/LongestWord/) |
+| Moving Median | Coderbyte | Sliding Window | Easy | [Coderbyte/SlidingWindow/MovingMedian/](Coderbyte/SlidingWindow/MovingMedian/) |
+| Other Products | Coderbyte | Math | Easy | [Coderbyte/Math/OtherProducts/](Coderbyte/Math/OtherProducts/) |
+| Palindrome | Coderbyte | Strings | Easy | [Coderbyte/Strings/Palindrome/](Coderbyte/Strings/Palindrome/) |
+| Power of 2 | Coderbyte | Math | Easy | [Coderbyte/Math/PowerOfTwo/](Coderbyte/Math/PowerOfTwo/) |
+| Product Digits | Coderbyte | Math | Easy | [Coderbyte/Math/ProductDigits/](Coderbyte/Math/ProductDigits/) |
+| Question Marks | Coderbyte | Strings | Easy | [Coderbyte/Strings/QuestionMarks/](Coderbyte/Strings/QuestionMarks/) |
+| Remove Brackets | Coderbyte | Stack | Easy | [Coderbyte/Stack/RemoveBrackets/](Coderbyte/Stack/RemoveBrackets/) |
+| Simple Adding | Coderbyte | Math | Easy | [Coderbyte/Math/SimpleAdding/](Coderbyte/Math/SimpleAdding/) |
+| Simple Symbols | Coderbyte | Strings | Easy | [Coderbyte/Strings/SimpleSymbols/](Coderbyte/Strings/SimpleSymbols/) |
+| String Periods | Coderbyte | Strings | Easy | [Coderbyte/Strings/StringPeriods/](Coderbyte/Strings/StringPeriods/) |
+| Time Convert | Coderbyte | Math | Easy | [Coderbyte/Math/TimeConvert/](Coderbyte/Math/TimeConvert/) |
+| Username Validation | Coderbyte | Strings | Easy | [Coderbyte/Strings/UsernameValidation/](Coderbyte/Strings/UsernameValidation/) |
+| Vowel Square | Coderbyte | Matrix | Easy | [Coderbyte/Matrix/VowelSquare/](Coderbyte/Matrix/VowelSquare/) |
 
 ## Running a solution
 
