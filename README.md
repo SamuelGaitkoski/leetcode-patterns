@@ -89,6 +89,16 @@ coding-questions-patterns/
 | Time Convert | Coderbyte | Math | Easy | [Coderbyte/Math/TimeConvert/](Coderbyte/Math/TimeConvert/) |
 | Username Validation | Coderbyte | Strings | Easy | [Coderbyte/Strings/UsernameValidation/](Coderbyte/Strings/UsernameValidation/) |
 | Vowel Square | Coderbyte | Matrix | Easy | [Coderbyte/Matrix/VowelSquare/](Coderbyte/Matrix/VowelSquare/) |
+| Consecutive | Coderbyte | Sorting | Medium | [Coderbyte/Sorting/Consecutive/](Coderbyte/Sorting/Consecutive/) |
+| K Unique Characters | Coderbyte | Sliding Window | Medium | [Coderbyte/SlidingWindow/KUniqueCharacters/](Coderbyte/SlidingWindow/KUniqueCharacters/) |
+| Minimum Window Substring | Coderbyte | Sliding Window | Medium | [Coderbyte/SlidingWindow/MinimumWindowSubstring/](Coderbyte/SlidingWindow/MinimumWindowSubstring/) |
+| Number Encoding | Coderbyte | Strings | Medium | [Coderbyte/Strings/NumberEncoding/](Coderbyte/Strings/NumberEncoding/) |
+| Preorder Traversal | Coderbyte | Tree | Medium | [Coderbyte/Tree/PreorderTraversal/](Coderbyte/Tree/PreorderTraversal/) |
+| Prime Mover | Coderbyte | Math | Medium | [Coderbyte/Math/PrimeMover/](Coderbyte/Math/PrimeMover/) |
+| Run Length | Coderbyte | Strings | Medium | [Coderbyte/Strings/RunLength/](Coderbyte/Strings/RunLength/) |
+| String Reduction | Coderbyte | Strings | Medium | [Coderbyte/Strings/StringReduction/](Coderbyte/Strings/StringReduction/) |
+| Symmetric Tree | Coderbyte | Tree | Medium | [Coderbyte/Tree/SymmetricTree/](Coderbyte/Tree/SymmetricTree/) |
+| Tree Constructor | Coderbyte | Tree | Medium | [Coderbyte/Tree/TreeConstructor/](Coderbyte/Tree/TreeConstructor/) |
 
 ## Running a solution
 
