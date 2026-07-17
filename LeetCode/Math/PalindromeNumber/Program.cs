@@ -1,4 +1,4 @@
-namespace LeetCodePatterns.Math.PalindromeNumber;
+namespace CodingPatterns.LeetCode.Math.PalindromeNumber;
 
 // Verifies both approaches against the LeetCode examples plus a few edge cases.
 // Run with `dotnet run` from this folder.
